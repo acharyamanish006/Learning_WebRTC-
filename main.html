@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+
+<!--
+Copyright 2017 Google Inc.
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+-->
+
+<html lang="en">
+<head>
+
+<script type="cdd05f892e14062c027402f7-text/javascript">
+//  philipwalton.com/articles/the-google-analytics-setup-i-use-on-every-site-i-build
+window.ga = window.ga || function() {
+  (ga.q = ga.q || []).push(arguments);
+};
+ga('create', 'UA-33848682-1', 'auto');
+ga('set', 'transport', 'beacon');
+ga('send', 'pageview');
+</script>
+<script async src="https://www.google-analytics.com/analytics.js" type="cdd05f892e14062c027402f7-text/javascript"></script>
+
+<meta charset="utf-8">
+<meta name="description" content="Simplest possible examples of HTML, CSS and JavaScript.">
+<meta name="author" content="//samdutton.com">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta itemprop="name" content="simpl.info: simplest possible examples of HTML, CSS and JavaScript">
+<meta itemprop="image" content="/images/icons/icon192.png">
+<meta id="theme-color" name="theme-color" content="#fff">
+
+<link rel="icon" href="/images/icons/icon192.png">
+
+<base target="_blank">
+
+
+<title>RTCPeerConnection</title>
+
+<link rel="stylesheet" href="../css/main.css">
+
+<style>
+  button {
+    margin: 0 20px 0 0;
+    width: 85.9px;
+  }
+
+  button#hangupButton {
+    margin: 0;
+  }
+
+  p.borderBelow {
+    margin: 0 0 1.5em 0;
+    padding: 0 0 1.5em 0;
+  }
+
+  video {
+    height: 225px;
+    margin: 0 0 20px 0;
+    vertical-align: top;
+    width: calc(50% - 13px);
+  }
+
+  video#localVideo {
+    margin: 0 20px 20px 0;
+  }
+
+  @media (max-width: 400px) {
+
+    button {
+      width: 83px;
+    }
+
+    button {
+      margin: 0 11px 10px 0;
+    }
+
+    video {
+      height: 90px;
+      margin: 0 0 10px 0;
+      width: calc(50% - 7px);
+    }
+
+    video#localVideo {
+      margin: 0 10px 20px 0;
+    }
+  }
+
+
+
+</style>
+
+</head>
+
+<body>
+
+  <div id="container">
+    
+    <section id="george-floyd">
+      <a href="https://en.wikipedia.org/wiki/George_Floyd" title="Wikipedia entry for George Floyd" id="name">
+        <img src="../images/george-floyd.jpg" alt="George Floyd">
+      </a>
+      <a href="https://en.wikipedia.org/wiki/George_Floyd" title="Wikipedia entry for George Floyd" id="name">George Floyd</a>
+      <a href="https://secure.actblue.com/donate/naacp-1" id="dates">October 14, 1973 –&nbsp;May&nbsp;25,&nbsp;2020</a> 
+    </section>
+
+    <!-- <div id="highlight">
+      <p>Check out my new article: <a href="https://medium.com/@samdutton/website-prelaunch-checklist-14d0002b4c7c">Website prelaunch checklist</a><br>— simple techniques to find and fix glitches.</p>
+    </div> -->
+
+    <!-- <div id="highlight">
+      <p>I wrote an app!
+        <br><br>
+        <a href="https://medium.com/@samdutton/website-prelaunch-checklist-14d0002b4c7c">Multihouse</a> gets median scores for multiple URLs for multiple Lighthouse runs.</p>
+    </div>
+
+    <div id="highlight">
+			<p>HTML, CSS and JavaScript feature support across top browsers:
+			  <br><br>
+			  <a href="https://bit.ly/caniuse-stuff">bit.ly/caniuse-stuff</a>
+			</p>
+		</div> -->
+
+<!--      -->
+
+    <h1><a href="../index.html" title="simpl.info home page">simpl.info</a> RTCPeerConnection</h1>
+
+    <!-- <p>Check out the complete set of WebRTC demos at <a href="https://webrtc.github.io/samples/" title="WebRTC samples GitHub Pages">webrtc.github.io/samples</a>.</p> -->
+
+    <video id="localVideo" autoplay muted playsinline></video>
+    <video id="remoteVideo" autoplay playsinline></video>
+
+    <div>
+      <button id="startButton">Start</button>
+      <button id="callButton">Call</button>
+      <button id="hangupButton">Hang Up</button>
+    </div>
+
+    <p>View the console to see logging. The <code>MediaStream</code> object <code>localStream</code>, and the <code>RTCPeerConnection</code> objects <code>localPeerConnection</code> and <code>remotePeerConnection</code> are in global scope, so you can inspect them in the console as well.</p>
+
+    <p>For more information about RTCPeerConnection, see <a href="https://www.html5rocks.com/en/tutorials/webrtc/basics/" title="HTML5 Rocks article about WebRTC by Sam Dutton">Getting Started With WebRTC</a>.</p>
+
+    <script src="js/main.js" type="cdd05f892e14062c027402f7-text/javascript"></script>
+
+    <a href="https://github.com/samdutton/simpl/blob/gh-pages/rtcpeerconnection" title="View source for this page on GitHub" id="viewSource">View source on GitHub</a>
+
+  </div>
+
+<script src="/cdn-cgi/scripts/7d0fa10a/cloudflare-static/rocket-loader.min.js" data-cf-settings="cdd05f892e14062c027402f7-|49" defer></script><script defer src="https://static.cloudflareinsights.com/beacon.min.js/v52afc6f149f6479b8c77fa569edb01181681764108816" integrity="sha512-jGCTpDpBAYDGNYR5ztKt4BQPGef1P0giN6ZGVUi835kFF88FOmmn8jBQWNgrNd8g/Yu421NdgWhwQoaOPFflDw==" data-cf-beacon='{"rayId":"7e364af02f4c24a0","version":"2023.4.0","r":1,"token":"66e57f9d2d774c349a57c4dd058b5030","si":100}' crossorigin="anonymous"></script>
+</body>
+
+</html>
